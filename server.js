@@ -18,7 +18,7 @@ const app = express();
 const server = http.createServer(app);
 export const io = new Server(server, { 
   cors: { 
-    origin: ["https://orbit-server.onrender.com", "http://localhost:3000"], 
+    origin: ["orbitbeta.vercel.app", "http://localhost:3000"], 
     methods: ["GET", "POST"] 
   } 
 });
