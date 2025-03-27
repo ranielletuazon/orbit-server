@@ -7,11 +7,23 @@ import queueRoutes from "./routes/queueRoutes.js";
 import { removeUserFromQueue, handleUserDisconnect } from "./controllers/queueController.js";
 import { db } from "./firebaseConfig.js";
 
+// const app = express();
+// const server = http.createServer(app);
+// export const io = new Server(server, { cors: { origin: "*" } });
+
+// const port = 5000;
+
+//fix
 const app = express();
 const server = http.createServer(app);
-export const io = new Server(server, { cors: { origin: "*" } });
+export const io = new Server(server, { 
+  cors: { 
+    origin: ["https://orbit-server.onrender.com", "http://localhost:3000"], 
+    methods: ["GET", "POST"] 
+  } 
+});
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(cors());
