@@ -1,2 +1,8 @@
 orbit-5c69d-firebase-adminsdk-imdm8-ca15e56a32.json
 .env
+node_modules
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+package-lock.json
